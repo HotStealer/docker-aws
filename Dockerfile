@@ -18,7 +18,7 @@ RUN apk --no-cache add \
     mkdir ~/.aws
 
 # Expose volume for adding credentials
-VOLUME ["~/.aws"]
+VOLUME ["/root/.aws"]
 
 ENTRYPOINT ["/usr/bin/aws"]
 CMD ["--version"]
